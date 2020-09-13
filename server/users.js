@@ -9,14 +9,14 @@ const addUser = ({ id, name, room}) => {
     const existingUser = users.find((user) => user.room === room && user.name === name); // prevent same name and same room
 
     if(existingUser){
-        return {error: 'Username is taken'}
+        return {error: 'Username is taken'};
     }
 
     const user = { id, name, room };
 
     users.push(user);
 
-    return { user }
+    return { user };
 }
 
 const removeUser = (id) => {
@@ -28,7 +28,7 @@ const removeUser = (id) => {
 
 }
 
-const getUser = () => users.find((user) => user.id === id);
+const getUser = (id) => users.find((user) => user.id === id);
 
 const getUsersInRoom = (room) => users.filter((user) => user.room === room);
 
