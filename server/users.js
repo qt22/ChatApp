@@ -1,6 +1,8 @@
+// everything with users:
+// users joining, leaving, get users in the room
 const users= [];
 
-const addUser = ({ id, name, room}) => {
+const addUser = ({ id, name, room}) => { // user is a socket instance
     // Jerry App --> jerryapp
 
     name = name.trim().toLowerCase();
