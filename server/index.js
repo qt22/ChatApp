@@ -14,7 +14,7 @@ const server = http.createServer(app);
 const io = socketio(server); 
 // these three lines are a rundown to make the server working
 
-
+// add db here
 
 
 app.use(router);
